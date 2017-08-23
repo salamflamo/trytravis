@@ -5,7 +5,7 @@ express:
   - "4"
 
 addons:
-  ssh_known_hosts: <deploy-host>
+  ssh_known_hosts: fansdev.warungtegal.id
 before_deploy:
  - openssl aes-256-cbc -K $encrypted_<...>_key -iv $encrypted_<...>_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
  - eval "$(ssh-agent -s)"
@@ -15,6 +15,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/trytravis fans17@fansdev.warungtegal.id:/home/fans17/trytravis -p 3010
+  script: rsync -r --delete-after --quiet /home/fans17/trytravis fans17@fansdev.warungtegal.id:/home/fans17/trytravis -p 3010
   on:
     branch: master
