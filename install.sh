@@ -7,6 +7,5 @@ rm deploy-key.enc # Don't need it anymore
 chmod 600 deploy-key
 mv deploy-key ~/.ssh/id_rsa
 
-#install projek
-git clone https://github.com/salamflamo/trytravis.git
+
 
