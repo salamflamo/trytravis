@@ -8,4 +8,4 @@ before_install:
 script:
   - bash deploy.sh
 before_install:
-  - openssl aes-256-cbc -K $encrypted_22009518e18d_key -iv $encrypted_22009518e18d_iv -in deploy-key.enc -out deploy-key -d
+  - openssl aes-256-cbc -K $encrypted_469002a8da83_key -iv $encrypted_469002a8da83_iv -in deploy-key.enc -out deploy-key -d
