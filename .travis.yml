@@ -3,9 +3,8 @@ node_js:
   - "stable"
 addons:
   ssh_known_hosts: fansdev.warungtegal.id
-before_install:
-  - bash install.sh
 script:
   - bash deploy.sh
 before_install:
   - openssl aes-256-cbc -K $encrypted_469002a8da83_key -iv $encrypted_469002a8da83_iv -in deploy-key.enc -out deploy-key -d
+  - bash install.sh
